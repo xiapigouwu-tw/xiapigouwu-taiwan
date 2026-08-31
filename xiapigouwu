@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopee 蝦皮購物優惠券領取中心</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-[#FF7A30] to-[#6D1B0F] min-h-screen flex items-center justify-center p-4">
+<div class="bg-white rounded-[20px] w-full max-w-[360px] p-6 shadow-2xl text-center">
+  <h1 class="text-[#C0392B] font-medium text-[26px]">Shopee</h1>
+  <h2 class="text-[#C0392B] font-bold text-[18px] mt-1">蝦皮購物優惠券領取中心</h2>
+  <p class="text-gray-400 text-[12px] mt-2">限時優惠開放領取中</p>
+  <div class="mt-5 border border-dashed border-[#FF8A65] bg-[#FFF5F0] rounded-[12px] p-4 text-left">
+    <p class="text-[#A33] font-bold text-[14px]">天天超劃算優惠券</p>
+    <p class="text-[#C0392B] font-black text-[32px] mt-2">折 $2888</p>
+    <p class="text-[11px] text-[#666] mt-3">使用條件：低消 $0.01</p>
+    <p class="text-[11px] text-[#666]">有效期限：即日起至 09.10</p>
+  </div>
+  <button id="openModal" class="mt-5 w-full bg-[#E64A19] text-white font-bold py-3.5 rounded-[12px]">立即查看優惠券</button>
+  <p class="text-[10px] text-gray-400 mt-3">※請透過官方福利人員領取優惠券</p>
+</div>
+<div id="modal" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-[20px] w-full max-w-[340px] p-6 text-center shadow-2xl">
+    <h3 class="text-[#E53935] font-bold text-[16px]">優惠券領取說明</h3>
+    <p class="text-[#555] text-[13px] leading-6 mt-3">本活動聯合發放，申請過程中需要驗證是否為首次領取，請耐心配合！</p>
+    <button id="goClaim" class="mt-5 w-full bg-[#FF6D00] text-white font-bold py-3.5 rounded-[12px]">前往領取優惠券</button>
+  </div>
+</div>
+<script>
+  document.getElementById('openModal').onclick = () => document.getElementById('modal').classList.remove('hidden');
+  document.getElementById('modal').onclick = (e) => { if(e.target.id==='modal') e.currentTarget.classList.add('hidden'); }
+  document.getElementById('goClaim').onclick = () => window.location.href = 'https://lin.ee/oMYTMLq';
+</script>
+</body>
+</html>
